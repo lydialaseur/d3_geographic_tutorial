@@ -5,7 +5,7 @@ h2 {
   font-size: 16px;
   font-family: sans-serif;
   font-style: normal;
-  font-weight: normal; 
+  font-weight: normal;
   opacity: 0.7
 }
 
@@ -26,13 +26,19 @@ path.cell {
 }
 
 .land {
-  fill: none;
-  stroke: lightgrey;
+  fill: #7fff00;
+  stroke: red;
 }
 
 .state-boundary {
   fill: none;
-  stroke: lightgrey;
+  stroke: pink;
+  stroke-width: 2px;
+}
+
+.counties {
+  fill: none;
+  stroke: black;
 }
 
 #cells.voronoi path.cell {
@@ -44,4 +50,23 @@ path {
   stroke: none;
   stroke-linejoin: round;
   stroke-linecap: round;
+}
+
+#circles {
+  stroke-dasharray: 3;
+  animation: dash 1s linear alternate infinite;
+  stroke: red;
+  stroke-opacity: 20.0;
+  stroke-width: 3px;
+  fill: orange;
+  fill-opacity: 0.3;
+}
+
+@keyframes dash {
+  from {
+    stroke-dashoffset: 10;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
 }
